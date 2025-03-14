@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentisera Beta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+            position: relative;
+        }
+        
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .neon-border {
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background-clip: padding-box;
+            position: relative;
+        }
+        
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #00f0ff, #00ff85);
+            z-index: -1;
+            filter: blur(10px);
+        }
+        
+        section {
+            margin-bottom: 60px;
+            /* Adjust the space as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dynamic-bg"></div>
+    <nav class="w-full fixed top-0 bg-white/10 backdrop-blur-md p-4 flex justify-between items-center shadow-lg z-50">
+        <div class="text-purple-400 text-2xl font-bold">MENTISERA</div>
+
+        <div class="hidden md:flex space-x-6 text-sm ml-auto">
+            <a href="#home" class="hover:text-purple-400">Home</a>
+            <a href="#why" class="hover:text-purple-400"> Why Mentisera?</a>
+            <a href="#how" class="hover:text-purple-400"> How It Works</a>
+            <a href="#features" class="hover:text-purple-400"> Features</a>
+            <a href="#beta" class="hover:text-purple-400">Beta Signup</a>
+        </div>
+
+        <a href="#beta" class="bg-purple-400 text-black px-4 py-2 rounded-full text-sm font-bold ml-4">Join Beta Now</a>
+    </nav>
+
+
+
+    <main id="home" class="h-screen flex flex-col items-center justify-center text-center px-4 relative">
+        <h1 class="text-6xl md:text-7xl font-extrabold text-purple-400 animate-pulse">MENTISERA</h1>
+        <p class="mt-6 text-xl md:text-2xl">One-on-One Mentorship and Career Growth Platform</p>
+        <p class="mt-4 text-2xl font-semibold">Connect with international mentors, gain skills, and access internships</p>
+        <a href="#beta" class="mt-8 bg-purple-400 text-black px-6 py-3 rounded-full text-lg font-bold hover:bg-purple-500 transition">Join Beta Now</a>
+        <p class="mt-4 text-sm text-gray-400">Gain access to mentorship, courses, events, internships, and assessments</p>
+        <footer class="absolute bottom-10 flex flex-col items-center">
+            <p class="text-gray-400">Scroll to explore</p>
+            <a href="#why"><i class="fas fa-chevron-down text-purple-400 mt-2 animate-bounce"></i></a>
+        </footer>
+    </main>
+
+
+    <section id="why" class="w-full text-center py-20 px-6 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-extrabold text-purple-300">Why Mentisera?</h2>
+            <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-300">
+                You’re not alone. But guess what? You don’t have to struggle anymore! Mentisera is here to ignite your career and get you ahead—FASTER, SMARTER, and STRONGER! 💥
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 p-8 mt-10">
+                <!-- 1:1 Mentorship with Industry Experts -->
+                <article class="bg-gray-800 p-8 rounded-xl shadow-xl h-full transition-all duration-300 
+transform hover:-translate-y-2 hover:bg-gray-700 active:scale-95">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-user-graduate text-4xl text-blue-400"></i>
+                        <h3 class="text-2xl font-bold text-white">1:1 Mentorship with Industry Experts</h3>
+                    </div>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        Get personalized mentorship from top professionals across various industries. Gain insights, career advice, and skill-based guidance tailored just for you.
+                    </p>
+                </article>
+
+                <!-- Global Certifications for Career Growth -->
+                <article class="bg-gray-800 p-8 rounded-xl shadow-xl h-full transition-all duration-300 
+transform hover:-translate-y-2 hover:bg-gray-700 active:scale-95">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-certificate text-4xl text-yellow-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Global Certifications for Career Growth</h3>
+                    </div>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        Earn industry-recognized certifications that boost your resume and validate your expertise. Stay ahead with globally accepted credentials.
+                    </p>
+                </article>
+
+
+                <!-- Internship Opportunities -->
+                <article class="bg-gray-800 p-8 rounded-xl shadow-xl h-full transition-all duration-300 
+transform hover:-translate-y-2 hover:bg-gray-700 active:scale-95">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-briefcase text-4xl text-blue-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Internship Opportunities (Coming Soon)</h3>
+                    </div>
+                    <p class="mt-4 text-gray-300 leading-relaxed blur-md opacity-20 transition-all duration-300 hover:opacity-30">
+                        Mentisera offers access to exclusive internship programs, allowing you to gain hands-on experience and build industry connections.
+                    </p>
+                </article>
+
+                <!-- Career Development Support -->
+                <article class="bg-gray-800 p-8 rounded-xl shadow-xl h-full transition-all duration-300 
+transform hover:-translate-y-2 hover:bg-gray-700 active:scale-95">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-chart-line text-4xl text-yellow-400"></i>
+                        <h3 class="text-2xl font-bold text-white">Career Development Support (Coming Soon)</h3>
+                    </div>
+                    <p class="mt-4 text-gray-300 leading-relaxed blur-md opacity-20 transition-all duration-300 hover:opacity-30">
+                        Get personalized career guidance, interview preparation, and networking opportunities to help you secure the right job.
+                    </p>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="how" class="w-full text-center py-16 px-6 bg-gray-900">
+        <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            How Mentisera Works
+        </h2>
+        <p class="mt-6 text-lg max-w-3xl mx-auto text-gray-300">
+            Unlock your potential with Mentisera’s AI-driven career acceleration in three simple steps.
+        </p>
+
+        <div class="mt-10 flex flex-col md:flex-row justify-center gap-8">
+            <!-- Step 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg text-left shadow-lg max-w-sm 
+                        transform transition-all duration-300 hover:scale-105 hover:bg-gray-700 
+                        active:scale-95">
+                <span class="text-3xl font-bold text-blue-400">1</span>
+                <h3 class="mt-4 text-xl font-semibold text-white">Personalized Career Roadmap</h3>
+                <p class="mt-2 text-gray-400">
+                    Start by assessing your skills, strengths, and career aspirations to get a customized growth plan.
+                </p>
+                <div class="mt-4 h-1 w-full bg-blue-400"></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg text-left shadow-lg max-w-sm 
+                        transform transition-all duration-300 hover:scale-105 hover:bg-gray-700 
+                        active:scale-95">
+                <span class="text-3xl font-bold text-green-400">2</span>
+                <h3 class="mt-4 text-xl font-semibold text-white">AI-Driven Skill Enhancement</h3>
+                <p class="mt-2 text-gray-400">
+                    Get access to global certifications, one-on-one mentorship, and AI-powered learning resources tailored to your career goals.
+                </p>
+                <div class="mt-4 h-1 w-full bg-green-400"></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg text-left shadow-lg max-w-sm 
+                        transform transition-all duration-300 hover:scale-105 hover:bg-gray-700 
+                        active:scale-95">
+                <span class="text-3xl font-bold text-purple-400">3</span>
+                <h3 class="mt-4 text-xl font-semibold text-white">Land High-Impact Opportunities</h3>
+                <p class="mt-2 text-gray-400">
+                    Gain exclusive access to top internships, career guidance, and networking events to accelerate your career success.
+                </p>
+                <div class="mt-4 h-1 w-full bg-purple-400"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="features" class="bg-black text-white py-10">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
+                    Mentisera vs. Traditional Learning Platforms
+                </h2>
+                <p class="text-base text-gray-300 mt-1">
+                    Why Mentisera is the future of AI-driven career growth.
+                </p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+                    <thead class="bg-gray-900">
+                        <tr>
+                            <th class="py-3 px-4 text-left text-xs font-semibold text-gray-300">Feature</th>
+                            <th class="py-3 px-4 text-center text-xs font-semibold text-gray-300">Traditional</th>
+                            <th class="py-3 px-4 text-center text-xs font-semibold text-gray-300">Mentisera</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700 hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">AI-Powered Career Guidance</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-times text-red-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">Personalized Learning Path</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-times text-red-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">One-on-One Mentorship</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-times text-red-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">Real-World Skill Training</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-times text-red-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                        <tr class="border-b border-gray-700 hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">Designed for Students & Professionals</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-times text-red-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700 transition-all">
+                            <td class="py-3 px-4 text-xs">Progress Tracking & Certifications</td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                            <td class="py-3 px-4 text-center"><i class="fas fa-check text-green-500 text-sm"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="beta">
+        <section class="text-center py-16 bg-gray-800 rounded-lg mx-auto max-w-4xl shadow-lg">
+            <h1 class="text-3xl md:text-4xl font-bold text-teal-400">Join Thousands of Students</h1>
+            <p class="text-lg md:text-xl mt-4 text-gray-300">
+                Students across the country are already transforming their careers with <span class="font-bold text-teal-300">Mentisera</span>
+            </p>
+
+            <!-- Sprinting Numbers -->
+            <div class="flex justify-center mt-12 space-x-12">
+                <div>
+                    <h2 id="studentsCount" class="text-4xl md:text-5xl font-bold text-teal-400">1</h2>
+                    <p class="text-gray-300 mt-2">Students Registered for Beta</p>
+                </div>
+                <div>
+                    <h2 id="jobMatches" class="text-4xl md:text-5xl font-bold text-green-400">1</h2>
+                    <p class="text-gray-300 mt-2">Job Matches Waiting for You</p>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="mt-16">
+                <h2 class="text-2xl md:text-3xl font-bold">Beta Launch Countdown</h2>
+                <div id="countdown" class="flex justify-center mt-4 space-x-4 text-2xl md:text-3xl font-bold"></div>
+            </div>
+
+            <!-- Beta Access Warning -->
+            <div class="mt-8">
+                <p class="text-lg md:text-xl text-red-500">
+                    <i class="fas fa-exclamation-triangle"></i> Beta Access Closes Soon!
+                </p>
+            </div>
+        </section>
+    </section>
+
+
+    <script>
+        // Sprinting Numbers Animation
+        function animateNumbers(id, target, duration) {
+            let current = 1;
+            const step = Math.ceil(target / (duration / 10));
+            const interval = setInterval(() => {
+                document.getElementById(id).textContent = current + "+";
+                current += step;
+                if (current >= target) {
+                    document.getElementById(id).textContent = target + "+";
+                    clearInterval(interval);
+                }
+            }, 10);
+        }
+
+        animateNumbers("studentsCount", 180, 2000);
+        animateNumbers("jobMatches", 1000, 2500);
+
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 6);
+            launchDate.setHours(0, 0, 0, 0);
+
+            function calculateTime() {
+                const now = new Date().getTime();
+                const timeLeft = launchDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `
+                    <div class="text-teal-400">
+                        <span>${days}</span>
+                        <p class="text-sm md:text-base text-gray-300">DAYS</p>
+                    </div>
+                    <div class="text-teal-400">:</div>
+                    <div class="text-teal-400">
+                        <span>${hours}</span>
+                        <p class="text-sm md:text-base text-gray-300">HOURS</p>
+                    </div>
+                    <div class="text-teal-400">:</div>
+                    <div class="text-purple-500">
+                        <span>${minutes}</span>
+                        <p class="text-sm md:text-base text-gray-300">MINUTES</p>
+                    </div>
+                    <div class="text-teal-400">:</div>
+                    <div class="text-teal-400">
+                        <span>${seconds}</span>
+                        <p class="text-sm md:text-base text-gray-300">SECONDS</p>
+                    </div>
+                `;
+            }
+            calculateTime();
+            setInterval(calculateTime, 1000);
+        }
+
+        updateCountdown();
+    </script>
+
+</body>
+
+</html>
+
+</section>
+
+
+<section class="flex flex-col items-center text-center bg-black px-10 py-16 rounded-lg shadow-lg max-w-6xl mx-auto relative w-full">
+    <h1 class="text-6xl font-bold mb-6 text-white">
+        Ready to <span class="text-teal-400">Turbocharge</span> Your Career?
+    </h1>
+    <p class="text-xl text-gray-300 mb-8 max-w-3xl">
+        The job market won’t wait—so why should you? Let Mentisera’s AI revolutionize your job search, so you can land the right opportunity without the hassle.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <button class="bg-teal-400 text-black font-bold py-4 px-8 rounded-lg flex items-center text-lg hover:bg-teal-500 transition">
+            🔥 Join Beta Now
+        </button>
+        <button class="border-2 border-teal-400 text-teal-400 font-bold py-4 px-8 rounded-lg flex items-center text-lg hover:bg-teal-400 hover:text-black transition">
+            💬 Get Job Alerts on WhatsApp
+        </button>
+    </div>
+
+    <footer class="mt-12 text-center">
+        <div class="text-teal-400 font-bold text-lg">Mentisera</div>
+        <div class="text-sm text-gray-400">AI-Powered Career Acceleration</div>
+        <div class="text-xs text-gray-500 mt-4">© 2025 Mentisera. All rights reserved.</div>
+    </footer>
+
+    <!-- Background Effect -->
+    <div class="absolute inset-0">
+        <canvas id="particles-js"></canvas>
+    </div>
+</section>
+
+<!-- Include Particles.js for Background Animation -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 100
+            },
+            "size": {
+                "value": 3
+            },
+            "move": {
+                "speed": 2
+            },
+            "line_linked": {
+                "enable": true,
+                "opacity": 0.3
+            }
+        }
+    });
+</script>
+
+
+
+</body>
+
+</html>
